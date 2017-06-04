@@ -18,7 +18,7 @@ public class FunctionalInterfacesInJava8_1 {
     }
 
     @Test()
-    public static void runExample() {
+    public void runExample() {
         ExecuteWithMetrics.exec(() -> useless(1));
         ExecuteWithMetrics.exec(() -> useless(2));
     }

@@ -17,7 +17,7 @@ public class FunctionalInterfacesInJava8_2 {
     }
 
     @Test
-    public static void runExample() {
+    public void runExample() {
 
         int result = ExecuteWithMetrics.exec2(() -> op1(2));
         System.out.println("FunctionalInterfacesInJava8_2 intResult: " + result);
