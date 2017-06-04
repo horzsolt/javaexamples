@@ -1,4 +1,4 @@
-package horzsolt.javaexamples.test;
+package horzsolt.javaexamples.test.venkat;
 
 import horzsolt.javaexamples.helper.Person;
 import org.junit.Test;
@@ -13,7 +13,7 @@ import static java.util.stream.Collectors.toList;
 /**
  * Created by horzsolt on 2017. 05. 13..
  */
-public class ComparatorSample_Venkat {
+public class ComparatorSample {
 
     public static List<Person> sortBy(List<Person> people, Comparator<Person> comparator) {
         return people.stream().sorted(comparator).collect(toList());

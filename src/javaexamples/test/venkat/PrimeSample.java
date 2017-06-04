@@ -1,4 +1,4 @@
-package horzsolt.javaexamples.test;
+package horzsolt.javaexamples.test.venkat;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 /**
  * Created by horzsolt on 2017. 05. 14..
  */
-public class PrimeSample_Venkat {
+public class PrimeSample {
 
     public static boolean isPrime(int number) {
         return number > 1 &&
