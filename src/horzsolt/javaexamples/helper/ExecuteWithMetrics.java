@@ -1,5 +1,6 @@
 package horzsolt.javaexamples.helper;
 
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
@@ -21,6 +22,16 @@ public class ExecuteWithMetrics {
         long start = System.nanoTime();
         try {
             return codeBlock.get();
+        } finally {
+            long end = System.nanoTime();
+            System.out.println("Time taken : " + (end - start) / 1.0e9);
+        }
+    }
+
+    public static <T, R> R exec3(T input, Function<T, R> codeBlock) {
+        long start = System.nanoTime();
+        try {
+            return codeBlock.apply(input);
         } finally {
             long end = System.nanoTime();
             System.out.println("Time taken : " + (end - start) / 1.0e9);
