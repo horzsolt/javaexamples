@@ -17,7 +17,8 @@ public class TestSuite {
             PrimeSample.class,
             LastElementOfAStream.class,
             MapFlatMap.class,
-            ReduceExamples.class
+            ReduceExamples.class,
+            OptionalExample.class
     })
 
     public class FeatureTestSuite {
