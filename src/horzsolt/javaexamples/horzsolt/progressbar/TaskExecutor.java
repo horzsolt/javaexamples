@@ -21,7 +21,7 @@ public class TaskExecutor {
         this.stream = stream;
         this.currentValue = currentValue;
         this.maxValue = maxValue;
-        this.progressBar = new Thread(new ProgreesBarThread());
+        this.progressBar = new Thread(new ProgressBarThread());
     }
 
     public <T> T start(Supplier<T> task) throws Exception {
@@ -77,7 +77,7 @@ public class TaskExecutor {
         }
     }
 
-    private class ProgreesBarThread implements Runnable {
+    private class ProgressBarThread implements Runnable {
 
         @Override
         public void run() {
