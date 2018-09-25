@@ -16,6 +16,10 @@ public class ProgressBar {
     private volatile boolean exception = false;
     private long startTime;
 
+    /**
+     * Run an arbitrary code and print progress on the provided output.
+     * @param task
+     */
     public ProgressBar(ProgressableTest task) {
         this.task = task;
         currentValue = () -> task.getCurrentValue();
@@ -53,7 +57,7 @@ public class ProgressBar {
 
                 if (exception) {
                     stream.println();
-                    stream.println("Incomplete termination, " + "check log for exception.");
+                    stream.println("Incomplete termination, check log for exception.");
                 } else {
                     print(maxValue);
                 }

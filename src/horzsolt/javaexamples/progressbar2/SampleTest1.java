@@ -4,6 +4,9 @@ import java.io.PrintStream;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.IntStream;
 
+/**
+ * Example progressable test
+ */
 public class SampleTest1 implements ProgressableTest {
 
     AtomicLong currentValue = new AtomicLong(0L);
