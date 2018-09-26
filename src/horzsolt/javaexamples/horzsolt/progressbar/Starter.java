@@ -16,7 +16,7 @@ public class Starter {
         Supplier<Long> tasks = () -> {
             IntStream.range(0, maxValue).forEach(
                     counter -> {
-                        System.out.println(counter);
+                        System.out.println("Do something dummy task " + counter);
 
                         try {
                             Thread.sleep(1000);
@@ -27,10 +27,10 @@ public class Starter {
                     }
             );
 
-            return 1L;
+            return 1L; //return the result of the dummy task
         };
 
-        TaskExecutor executor = new TaskExecutor(System.out, currentValue, maxValue);
+        ProgressBar executor = new ProgressBar(System.out, currentValue, maxValue);
 
         try {
             executor.start(tasks);
